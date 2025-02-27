@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Encryption & Decryption</title>
+    <link rel="stylesheet" href="../css/encryption.css">
+</head>
+<body onload="checkLogin()">
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+
+    <div class="container" id="selectionScreen">
+        <h2>🔐 Secure Text Encryption</h2>
+        <button onclick="showEncryption()">Encrypt Text</button>
+        <button onclick="showDecryption()">Decrypt Text</button>
+    </div>
+
+    <div class="container" id="encryptionSection" style="display: none;">
+        <h2>🔒 Encrypt Text</h2>
+        <input type="text" id="textInput" placeholder="Enter text to encrypt">
+        <button onclick="encryptText()">Encrypt</button>
+        <p><b>Key:</b> <input type="text" id="encKey" readonly></p>
+        <p><b>IV:</b> <input type="text" id="encIV" readonly></p>
+        <p><b>Encrypted Text:</b> <input type="text" id="encryptedOutput" readonly></p>
+        <button onclick="copyToClipboard()">Copy Encrypted Data</button>
+        <button onclick="goBack()">⬅ Back</button>
+    </div>
+
+    <div class="container" id="decryptionSection" style="display: none;">
+        <h2>🔓 Decrypt Text</h2>
+        <input type="text" id="decryptKey" placeholder="Enter encryption key">
+        <input type="text" id="decryptIV" placeholder="Enter IV">
+        <input type="text" id="encryptedText" placeholder="Enter encrypted text">
+        <button onclick="decryptText()">Decrypt</button>
+        <p><b>Decrypted Text:</b> <input type="text" id="decryptedOutput" readonly></p>
+        <button onclick="goBack()">⬅ Back</button>
+    </div>
+
+    <script src="../js/encryption.js"></script>
+
+</body>
+</html>

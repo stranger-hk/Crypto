@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Sci-Fi Portal</title>
+    <link rel="stylesheet" href="../css/signup.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>🚀 Join the Sci-Fi Universe</h2>
+        <form id="signupForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="text" id="f_name" placeholder="First Name" required>
+            <input type="text" id="l_name" placeholder="Last Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="number" id="age" placeholder="Age" required>
+            <select id="sex">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="confirm_password" placeholder="Confirm Password" required>
+            
+            <button type="button" onclick="registerUser()">Signup</button>
+        </form>
+
+        <div class="nav-buttons">
+            <button type="button" onclick="navigate('home')">Home</button>
+            <button type="button" onclick="navigate('login')">Login</button>
+        </div>
+
+        <p id="status"></p>
+    </div>
+
+    <script src="../js/signup.js"></script>
+</body>
+</html>
